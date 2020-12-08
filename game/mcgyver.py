@@ -5,11 +5,12 @@ import pygame
 
 class Mcgyver:
     def __init__(self, position):
-        """Initialize the character and his position"""
+        """Initialize MacGyver and his position"""
         self.position = position
         self.inventory = 0
 
     def move(self, direction):
+        """Method to attribuate a new position to MacGyver"""
         if direction == "u":
             self.position[1] -= 1
             return self.position
@@ -24,15 +25,13 @@ class Mcgyver:
             return self.position
     
     def check_item_pos(self):
+        """Method to check if MacGyver is on an object position"""
         item = 0
         if self.position == item_pos:
             item +=1
             return item
 
-
     def self_position(self):
+        """Method to return MacGyver position"""
         return self.position
-
-    def show_health(self):
-        pass
     
