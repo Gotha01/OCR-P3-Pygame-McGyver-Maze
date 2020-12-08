@@ -37,6 +37,8 @@ class Accessor:
         loading = True
         while loading:
             for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    exit()
                 if event.type == pygame.KEYDOWN:
                     loading = False
     
