@@ -3,9 +3,9 @@
 """Graphic and Visual elements of the maze"""
 
 
-#Text fonts:
+# Text fonts:
 Bold_text_font = "game/ressources/text_fonts/Geddes_bold.otf"
-#Texts:
+# Texts:
 WINDOW_TITLE = "Maze : McGyver!"
 TMT = "THE GAME"
 CTP = "Click any key to start the game"
@@ -14,7 +14,7 @@ VICTORY_1 = "! Well done !"
 VICTORY_2 = "MacGyver managed to escape !"
 GAMEOVER_1 = "! GAME OVER !"
 GAMEOVER_2 = "You failed to pass the guard..."
-#Pictures:
+# Pictures:
 LOAD = "game/ressources/images/imgstart.jpg"
 WALL = "game/ressources/images/wall_font_30_30.png"
 PATH = "game/ressources/images/floor_font_30_30.png"
@@ -24,8 +24,8 @@ GUARD = "game/ressources/images/Guardian.png"
 NEEDLE = "game/ressources/images/needle.png"
 TUBE = "game/ressources/images/tube.png"
 ETHER = "game/ressources/images/ether.png"
-#Color called in game:
-BLUE = (50, 50, 255)
+# Color called in game:
+BL = (50, 50, 255)
 RED = (225, 65, 25)
 WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)

@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import os
 import pygame
 
 import game.level_table as lvl
@@ -41,11 +40,11 @@ class Accessor:
                     exit()
                 if event.type == pygame.KEYDOWN:
                     loading = False
-    
+
     def game_loop(self):
         """Game loop to run the game"""
         self.launched = True
-        while self.launched: 
+        while self.launched:
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     exit()
@@ -55,14 +54,14 @@ class Accessor:
                     if event.key == pygame.K_UP:
                         self.mac_gyver_move("u", "d", pos_x, pos_y)
                     elif event.key == pygame.K_DOWN:
-                        self.mac_gyver_move("d","u", pos_x, pos_y)
+                        self.mac_gyver_move("d", "u", pos_x, pos_y)
                     elif event.key == pygame.K_LEFT:
-                        self.mac_gyver_move("l","r", pos_x, pos_y)
+                        self.mac_gyver_move("l", "r", pos_x, pos_y)
                     elif event.key == pygame.K_RIGHT:
-                        self.mac_gyver_move("r","l", pos_x, pos_y) 
+                        self.mac_gyver_move("r", "l", pos_x, pos_y)
 
     def endgame_loop(self):
-        """Loop to show end of game""" 
+        """Loop to show end of game"""
         endgame = True
         while endgame:
             for event in pygame.event.get():
@@ -87,7 +86,7 @@ class Accessor:
         needle_pos = self.maze.rdm_object()
         tube_pos = self.maze.rdm_object()
         ether_pos = self.maze.rdm_object()
-        while obj_created == False:
+        while obj_created is False:
             self.vis.draw_needle(needle_pos[0], needle_pos[1])
             if tube_pos != needle_pos:
                 self.vis.draw_tube(tube_pos[0], tube_pos[1])
@@ -95,7 +94,7 @@ class Accessor:
                     self.vis.draw_ether(ether_pos[0], ether_pos[1])
                     obj_created = True
         return [needle_pos, tube_pos, ether_pos]
-        
+
     def mac_gyver_making(self):
         """Method to generate MacGyver"""
         pos_x = self.maze.find_start_pos()[0]
@@ -109,7 +108,6 @@ class Accessor:
             if new_position in self.objects_pos:
                 self.inventory += 1
                 self.objects_pos.remove(new_position)
-                print(self.inventory)
             self.vis.advance_mac(x, y, new_position)
             if new_position == self.endgame_pos:
                 self.finish()
@@ -124,4 +122,3 @@ class Accessor:
             self.vis.victory_page()
         else:
             self.vis.lose_page()
-        

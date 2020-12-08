@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import pygame
-
 
 class Mcgyver:
     def __init__(self, position):
@@ -23,15 +21,7 @@ class Mcgyver:
         elif direction == "r":
             self.position[0] += 1
             return self.position
-    
-    def check_item_pos(self):
-        """Method to check if MacGyver is on an object position"""
-        item = 0
-        if self.position == item_pos:
-            item +=1
-            return item
 
     def self_position(self):
         """Method to return MacGyver position"""
         return self.position
-    
