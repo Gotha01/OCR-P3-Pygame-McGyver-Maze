@@ -2,6 +2,7 @@
 
 
 class Mcgyver:
+    """Class to create McGyver"""
     def __init__(self, position):
         """Initialize MacGyver and his position"""
         self.position = position
